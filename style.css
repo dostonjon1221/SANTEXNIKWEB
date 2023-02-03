@@ -1,0 +1,282 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Poppins:ital,wght@0,600;1,400&family=Quicksand:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap');
+@import url(https://fonts.googleapis.com/css2?family=Quicksand:wght@100;200;300;400;500;600;700&display=swap);
+
+:root{
+    --playfair:font-family: 'Playfair Display', serif;
+    --quicsand:font-family: 'Quicksand', sans-serif;
+    --roboto:font-family: 'Roboto', sans-serif;
+    --dark:#3c393d;
+    --exDark:#2b2b2b;
+
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+}
+
+body{
+    background: rgb(255, 255, 255,0.5);
+}
+
+ul{
+    list-style-type: none;
+    padding: 0;
+}
+.container , .container-inner{
+    margin: 0 auto;
+    width: 100%;
+    z-index: 111;
+}
+.menu{
+    z-index: 111;
+}
+
+.container{
+    max-width: 1350px;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 5fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    background: rgba(0,0,0,.5);
+}
+.container-inner{
+    max-width: 1000px;
+}
+.container .container-inner{
+    margin:0 auto ;
+    width: 100%;
+
+}
+.brand{
+font-size: 1.6rem;
+}
+nav .container-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+nav .container ul{
+    width: 100%;
+    margin: 0 1rem;
+}
+nav .container ul:nth-child(2){
+    text-align: center;
+
+}
+nav .container ul li{
+    display: inline-block;
+    margin: 0 .7;
+}
+nav a{
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: .3s;
+    font-weight: 600;
+    color: #fff;
+}
+
+nav a:hover{
+    color: #e54416;
+
+}   
+.input-wrap{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: .5rem 0;
+}
+form input,
+form button{
+    background: none;
+    border: none;
+    color:White;
+}
+form button{
+    cursor: pointer;
+}
+form input::placeholder{
+    color: white;
+}
+form input:focus{
+    outline:none
+}
+
+nav .fa-bars{
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: .3s;
+    text-align: right;
+    color: white;
+}
+nav .fa-bars:hover{
+    color:#e54416
+}
+.menu{
+    background: black;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    text-align: center      ;
+    font-size: 1.2rem;
+    height: 0;
+    opacity: 0;
+    transition: .7s cubic-bezier(.74,-0.03,.83,.67);
+    overflow: hidden;
+}
+.logo{
+    width: 3em;
+}
+.menu ul,
+.menu form{
+    margin: 1em auto;
+}
+
+.menu li{
+    margin: 1em 0;
+}
+
+.a{
+    font-size: 1.2rem;
+}
+.menu > div{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: column;
+    padding: 6em 1em 3em 1em;
+}
+.menu>div::-webkit-scrollbar{
+    display: none;
+
+}
+.menu .social-media{
+    margin: 2em 0;
+}
+.social-media li{
+    display: inline-block;
+    margin:0 0.5em
+}
+
+/* classes for js  */
+
+.menu-open{
+    height: 100vh;
+    opacity: 1;
+}
+.navbar-active{
+    background: #111;
+    padding: 1em;
+}
+
+/* scrool section  */
+.containers{
+    width: 100%;
+}
+.slideshow-container{
+    width: 100%;
+}
+.swiper{
+    width: 100%;
+    height: fit-content;
+}
+.swiper-slide img{
+width: 100%;
+
+}
+.title{
+    text-align: center;
+    padding: 1rem 0;
+}
+.title h2{
+    text-transform: uppercase;
+    padding: 0.6rem 0;
+    color:rgba(0,0,0,.9)
+}
+.design-content{
+    margin: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 2rem;
+    transition: all .5s ease;
+    justify-content: center;
+    align-items: center;
+  }
+  .design-item{
+    cursor: pointer;
+    margin: 0;
+}
+.design-item i{
+    width: 100px;
+    text-align: center  ;
+    font-size: 2rem;
+}
+.design-title{
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.img-position{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.pos{
+    width: 100%;
+    height: 190px;
+}
+
+/* navbar section  */
+@media only screen and (max-width:800px){
+    nav .container-inner{
+        display: none;
+    }
+    nav .container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+@media only screen and(min-width:800px){
+    .menu form{
+        display: none;
+    }
+}
+@media only screen and(max-width:400px){
+    html{
+        font-size: 13px;
+    }
+}
+/* navbar section tugadi  */
+
+/* maqsadlar section  */
+
+@media only screen and (max-width:800px){
+    .design-content{
+        margin: 2rem 0;
+        display: grid;
+        grid-template-columns: 100%;
+        gap: 2rem;
+    }
+   
+}
+
+
+@media only screen and (max-width:800px){
+    .place{
+       display: block;
+    margin: 0 auto;
+
+    }
+}
